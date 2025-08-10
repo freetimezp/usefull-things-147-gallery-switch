@@ -70,8 +70,7 @@ img {
 }
 
 .filter.active h1 span {
-    color: #d5d51e;
-    text-shadow: 2px 2px 15px rgba(255, 255, 255, 1);
+    color: #fff;
 }
 
 .items {

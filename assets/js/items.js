@@ -12,6 +12,7 @@ const items = [
     { title: "Love", tag: ["love"], img: "./assets/images/love11.jpg" },
     { title: "Love", tag: ["love"], img: "./assets/images/love12.jpg" },
     { title: "Love", tag: ["love"], img: "./assets/images/love13.jpg" },
+
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature1.jpg" },
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature2.jpg" },
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature3.jpg" },
@@ -23,6 +24,7 @@ const items = [
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature9.jpg" },
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature10.jpg" },
     { title: "Nature", tag: ["nature"], img: "./assets/images/nature11.jpg" },
+
     { title: "Abstract", tag: ["abstract"], img: "./assets/images/abstract1.jpg" },
     { title: "Abstract", tag: ["abstract"], img: "./assets/images/abstract2.jpg" },
     { title: "Abstract", tag: ["abstract"], img: "./assets/images/abstract3.jpg" },
