@@ -1,17 +1,19 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const itemsContainer = document.querySelector(".items");
     const itemsCols = document.querySelectorAll(".items-col");
     const filters = document.querySelectorAll(".filter");
-    const defaultFontSize = "75px";
-    const activeFontSize = "250px";
+    const defaultFontSize = "55px";
+    const activeFontSize = "125px";
 
     function splitTextIntoSpans(selector) {
         const elements = document.querySelectorAll(selector);
 
         elements.forEach((element) => {
             const text = element.innerText;
-            element.innerHTML = text.split("").map((char) => `<span>${char}</span>`).join("");
+            element.innerHTML = text
+                .split("")
+                .map((char) => `<span>${char}</span>`)
+                .join("");
         });
     }
 
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fontSize: fontSize,
             stagger: 0.025,
             duration: 0.5,
-            ease: "power2.out"
+            ease: "power2.out",
         });
     }
 
@@ -32,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function addItemsToCols(filter = 'all') {
+    function addItemsToCols(filter = "all") {
         let colIndex = 0;
 
-        const filteredItems = items.filter((item) => filter === 'all' || item.tag.includes(filter));
+        const filteredItems = items.filter((item) => filter === "all" || item.tag.includes(filter));
 
         filteredItems.forEach((item) => {
             const itemElement = document.createElement("div");
-            itemElement.className = 'item';
+            itemElement.className = "item";
             itemElement.innerHTML = `
                 <div class='item-img'>
                     <img src="${item.img}" alt="" />
@@ -61,28 +63,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearItems();
                 addItemsToCols(filter);
 
-                // Select all newly added .item elements
-                const newItems = document.querySelectorAll('.item');
+                const newItems = document.querySelectorAll(".item");
 
-                // Set initial state for animation
                 gsap.set(newItems, {
                     opacity: 0,
-                    scale: 0
+                    scale: 0,
                 });
 
                 gsap.to(newItems, {
                     opacity: 1,
                     duration: 0.5,
                     scale: 1,
-                    stagger: 0.25, // 0.25s between each item
-                    ease: "power2.out"
+                    stagger: 0.25,
+                    ease: "power2.out",
                 });
 
                 gsap.to(itemsContainer, {
                     opacity: 1,
                     duration: 0.25,
                 });
-            }
+            },
         });
     }
 
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const filterValue = this.getAttribute("data-filter");
             animateItems(filterValue);
-
         });
     });
 });

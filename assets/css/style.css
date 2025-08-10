@@ -13,6 +13,9 @@ a {
 body {
     width: 100%;
     height: 100%;
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 img {
@@ -54,20 +57,21 @@ img {
 }
 
 .filter.active p {
-    bottom: 24px; 
+    bottom: 24px;
 }
 
 .filter h1 span {
     position: relative;
     text-transform: uppercase;
-    font-size: 75px;
+    font-size: 55px;
     color: #000;
     line-height: 80%;
-    transition: color .3s;
+    transition: color 0.3s;
 }
 
 .filter.active h1 span {
-    color: #fb5eff;
+    color: #d5d51e;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 1);
 }
 
 .items {
@@ -101,32 +105,8 @@ img {
 }
 
 .item-copy p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
+    color: #fff7ca;
     margin: 0.5em 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
